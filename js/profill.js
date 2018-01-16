@@ -48,7 +48,7 @@ function getClassNames(classStr){
        }  
 }
 
-//hasclass
+//hasclass //自己写的
 function hasClass(el,classname){
 
   var targetClassname = el.className;
@@ -90,7 +90,40 @@ function removeClass(el,classname){
    }
 }
 
-//自己写的
+//判断ie
+function isIE(){
+    var Reg =/Micro/gi;
+    var browsername = navigator.appName;
+    var result = browsername.search(Reg)>-1?true:false;
+    return result
+}
+
+
+//判断是否具有css3一些特性
+//chrome和ie支持document.body，但是Firefox不支持，Firefox支持document.documentElement，对于没有doctype声明的ie又不支持document.documentElement。
+function cssProperty( attr ){
+        var prefix = [ 'O', 'ms', 'Moz', 'Webkit' ],
+            length = prefix.length,
+            style = document.createElement( 'i' ).style;
+        cssProperty =  function( attr ){
+            if( attr in style ){
+                return true;
+            }
+            attr = attr.replace( /^[a-z]/, function( val ){
+                return val.toUpperCase();
+            });
+            var len = length;
+            while( len-- ){
+                if( prefix[ len ] + attr in style ){
+                   return true;
+                }
+            }
+            return false;
+        };
+        return cssProperty( attr );
+    }
+
+
 
 //知乎的
 //将getClassName()方法定义在Object原型上，只要是对象皆可以用此方法；

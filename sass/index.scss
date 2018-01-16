@@ -23,6 +23,9 @@ body{
    background-repeat: no-repeat;
    background-position: center;
    background-color:#fff;
+   @media screen and (max-width:762px) {
+    margin-top:20px;
+   }
    &:nth-child(1){
     background-image: url(../img/blog.JPG);
     background-size: contain;
@@ -82,9 +85,10 @@ a{
   width:100%;
   top:0;
   bottom:0;
+  transform:translate3d(-100%,0,0);
   background:#fff;
   z-index:10;
-  transition:all .4s ;
+  transition:transform .4s ;
   .top{
     height:36px;
     background:$primarycolor ;
@@ -129,7 +133,12 @@ a{
     }
    }
 }
+//动画
 @keyframes dot {
  from {transform:translate(0,0)}
  to {transform:translate(0,-100%)}
+}
+
+.movein{
+    transform:translate3d(0,0,0);
 }

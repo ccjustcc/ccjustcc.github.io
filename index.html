@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <head>
     <meta charset="UTF-8">
     <title>ccjustcc的主页</title>
@@ -40,7 +40,7 @@
         <span class="dot"></span>About me
         </span>
     </footer>
-    <div class="fade none">
+    <div class="fade">
         <div class="top">
             <h1 class="title">
          About me</h1>
@@ -56,19 +56,40 @@
 <script src="js/profill.js"></script>
 <script>
 
-  
+
+
 
 window.onload=function(){
+    var IE = isIE();
+    var hastransform = cssProperty('transform');
+    console.log(hastransform);
     var fade = getClassNames('fade')[0]
     var about = getClassNames('about')[0]
     var close = getClassNames('close')[0]
+    if(!hastransform){
+        addClass(fade,"none");
+        var src = ["./img/blog.JPG","./img/vue.JPG","./img/shop.JPG"]
+        var showitems = getClassNames('showitem');
+        for(var i  = 0;i<showitems.length;i++){
+            var img = document.createElement('img');
+            img.src = src[i]
+            console.log(img);
+            showitems[i].appendChild(img);
+        }
+    }
     addEvent(about,"click", function() {
-        console.log('about')
-        removeClass(fade,"none")
+        if(hastransform){
+          addClass(fade,"movein")
+        }else{
+            removeClass(fade,"none")
+        }
     })
     addEvent(close,"click", function() {
-        console.log('cccc')
-        addClass(fade,"none")
+        if(hastransform){
+            removeClass(fade,"movein")
+        }else{
+            addClass(fade,'none');
+        }
     })
 }
 </script>
