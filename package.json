@@ -1,0 +1,19 @@
+{
+  "name": "gitpage",
+  "version": "1.0.0",
+  "description": "my gitpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cjt",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-connect": "^5.2.0",
+    "gulp-notify": "^3.1.0",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
