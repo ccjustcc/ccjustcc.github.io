@@ -8,6 +8,7 @@ body{
  padding:10px;
  font-size: 0;
  text-align: center;
+ 
  .showitem{
    position: relative;
    width:200px;
@@ -21,26 +22,26 @@ body{
    font-size: 14px;
    background-repeat: no-repeat;
    background-position: center;
-   background-color: #fff;
+   background-color:#fff;
    &:nth-child(1){
     background-image: url(../img/blog.JPG);
     background-size: contain;
      background-position: center top;
   }
-  &:nth-child(2){
-    background-image: url(../img/vue.JPG);
-    background-size: cover;
-  }
+    &:nth-child(2){
+      background-image: url(../img/vue.JPG);
+      background-size: cover;
+    }
   &:nth-child(3){
     background-image: url(../img/shop.JPG);
     background-size:cover;
   }
   &:last-child{
    margin-right:0;
- }
+  }
  &:hover{
   .content{bottom:0;}
-}
+ }
 a{
  position: absolute;
  left:0;
@@ -71,15 +72,16 @@ a{
    }
 
  }
+ .showitem{
+    *display:inline;;
+  }
 }
 
 .fade{
   position:fixed;
-  left:0;
-  right:0;
+  width:100%;
   top:0;
   bottom:0;
-  display:none;
   background:#fff;
   z-index:10;
   transition:all .4s ;
@@ -106,6 +108,7 @@ a{
     text-align:center;
   }
 }
+
 .about{
    position:fixed;
    bottom:0;

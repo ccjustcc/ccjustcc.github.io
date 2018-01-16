@@ -1,65 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <title>ccjustcc的主页</title>
- <link rel="stylesheet" href="css/reset.css">
- <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <title>ccjustcc的主页</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
- <article>
-  <caption>
-      <canvas id="mycanvas"></canvas>
-  </caption>
-  <caption>
-    <ul class="showlist">
-     <li class="showitem">
-       <a href="http://119.28.193.188/blog/"></a>
-       <div class="title">个人博客</div>
-       <div class="content">使用bootstrap制作的个人博客</div>
-     </li>
-     <li class="showitem">
-      <a href="http://119.28.193.188"></a>
-      <div class="title">vue实战</div>
-      <div class="content">一份vue实战,请不要使用旧版本uc浏览，浏览器下记得进入手机模拟模式</div>
-    </li>
-    <li class="showitem">
-     <a href="http://111.230.115.147/"></a>
-     <div class="title">毕业设计</div>
-     <div class="content">毕业设计，未完善</div>
-   </li>
-  </ul>
-</caption>
-</article>
-<footer>
-    <span class="about">
+    <article>
+        <caption>
+            <canvas id="mycanvas"></canvas>
+        </caption>
+        <caption>
+            <ul class="showlist">
+                <li class="showitem">
+                    <a href="http://119.28.193.188/blog/"></a>
+                    <div class="title">个人博客</div>
+                    <div class="content">使用bootstrap制作的个人博客</div>
+                </li>
+                <li class="showitem">
+                    <a href="http://119.28.193.188"></a>
+                    <div class="title">vue实战</div>
+                    <div class="content">一份vue实战,请不要使用旧版本uc浏览，浏览器下记得进入手机模拟模式</div>
+                </li>
+                <li class="showitem">
+                    <a href="http://111.230.115.147/"></a>
+                    <div class="title">毕业设计</div>
+                    <div class="content">毕业设计，未完善</div>
+                </li>
+            </ul>
+        </caption>
+    </article>
+    <footer>
+        <span class="about">
         <span class="dot"></span>
-         <span class="dot"></span>
-         <span class="dot"></span>About me
-    </span>
-</footer>
-<aside class="fade">
-     <div class="top">
-         <h1 class="title">
+        <span class="dot"></span>
+        <span class="dot"></span>About me
+        </span>
+    </footer>
+    <div class="fade none">
+        <div class="top">
+            <h1 class="title">
          About me</h1>
-         <span class="close">X</span>
-     </div>
-     <div class="middle">
-        <p>QQ:1303532426</p>
-        <p>邮箱同上,个人博客中也有联系方式</p>
-     </div>
-     <div class="bottom"></div>
-</aside>
+            <span class="close">X</span>
+        </div>
+        <div class="middle">
+            <p>QQ:1303532426</p>
+            <p>邮箱同上,个人博客中也有联系方式</p>
+        </div>
+        <div class="bottom"></div>
+    </div>
 </body>
+<script src="js/profill.js"></script>
 <script>
-     var fade = document.getElementsByClassName('fade')[0]
-     var about = document.getElementsByClassName('about')[0]
-     var close = document.getElementsByClassName('close')[0]
-     about.addEventListener('click', function(){
-        fade.style.display = 'block'
-     })
-     close.addEventListener('click',function(){
-       fade.style.display="none"
-     })
+
+  
+
+window.onload=function(){
+    var fade = getClassNames('fade')[0]
+    var about = getClassNames('about')[0]
+    var close = getClassNames('close')[0]
+    addEvent(about,"click", function() {
+        console.log('about')
+        removeClass(fade,"none")
+    })
+    addEvent(close,"click", function() {
+        console.log('cccc')
+        addClass(fade,"none")
+    })
+}
 </script>
+
 </html>
