@@ -28,8 +28,38 @@
      <div class="title">毕业设计</div>
      <div class="content">毕业设计，未完善</div>
    </li>
- </ul>
+  </ul>
 </caption>
 </article>
+<footer>
+    <span class="about">
+        <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>About me
+    </span>
+</footer>
+<aside class="fade">
+     <div class="top">
+         <h1 class="title">
+         About me</h1>
+         <span class="close">X</span>
+     </div>
+     <div class="middle">
+        <p>QQ:1303532426</p>
+        <p>邮箱同上,个人博客中也有联系方式</p>
+     </div>
+     <div class="bottom"></div>
+</aside>
 </body>
+<script>
+     var fade = document.getElementsByClassName('fade')[0]
+     var about = document.getElementsByClassName('about')[0]
+     var close = document.getElementsByClassName('close')[0]
+     about.addEventListener('click', function(){
+        fade.style.display = 'block'
+     })
+     close.addEventListener('click',function(){
+       fade.style.display="none"
+     })
+</script>
 </html>

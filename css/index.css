@@ -1,3 +1,7 @@
+body {
+  background: #CCCC33;
+  color: #fff; }
+
 .showlist {
   padding: 10px;
   font-size: 0;
@@ -11,11 +15,12 @@
     display: inline-block;
     margin-right: 10px;
     border-radius: 2px;
-    -webkit-box-shadow: 0px 2px 6px #ccc;
-            box-shadow: 0px 2px 6px #ccc;
+    -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
     font-size: 14px;
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: center;
+    background-color: #fff; }
     .showlist .showitem:nth-child(1) {
       background-image: url(../img/blog.JPG);
       background-size: contain;
@@ -57,3 +62,69 @@
       -webkit-transition: all 0.3s;
       transition: all 0.3s;
       padding: 2px 2px; }
+
+.fade {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  background: #fff;
+  z-index: 10;
+  -webkit-transition: all .4s;
+  transition: all .4s; }
+  .fade .top {
+    height: 36px;
+    background: #CCCC33; }
+    .fade .top .title {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      line-height: 32px; }
+    .fade .top .close {
+      position: absolute;
+      top: 0;
+      cursor: pointer;
+      line-height: 32px;
+      padding-left: 10px; }
+  .fade .middle {
+    color: #CCCC33;
+    text-align: center; }
+
+.about {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 20px;
+  cursor: pointer; }
+  .about .dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-animation: dot .4s ease-in-out  infinite alternate;
+            animation: dot .4s ease-in-out  infinite alternate; }
+    .about .dot:nth-of-type(2) {
+      -webkit-animation-delay: .4s;
+              animation-delay: .4s; }
+    .about .dot:nth-of-type(3) {
+      -webkit-animation-delay: .8s;
+              animation-delay: .8s; }
+
+@-webkit-keyframes dot {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  to {
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%); } }
+
+@keyframes dot {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  to {
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%); } }
