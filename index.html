@@ -10,15 +10,16 @@
 
 <body>
     <article>
-        <caption>
+        <div>
             <canvas id="mycanvas"></canvas>
-        </caption>
-        <caption>
-            <ul class="showlist">
+        </div>
+        <div class="state">
+            <ul class="showlist container">
                 <li class="showitem">
                     <a href="http://119.28.193.188/blog/"></a>
                     <div class="title">个人博客</div>
-                    <div class="content">使用bootstrap制作的个人博客</div>
+                    <div class="content">使用bootstrap制作的个人博客
+                    </div>
                 </li>
                 <li class="showitem">
                     <a href="http://119.28.193.188"></a>
@@ -28,10 +29,10 @@
                 <li class="showitem">
                     <a href="http://111.230.115.147/"></a>
                     <div class="title">毕业设计</div>
-                    <div class="content">毕业设计，未完善</div>
+                    <div class="content">毕业设计，未完善,有和后台交互</div>
                 </li>
             </ul>
-        </caption>
+        </div>
     </article>
     <footer>
         <span class="about">
@@ -39,6 +40,11 @@
         <span class="dot"></span>
         <span class="dot"></span>About me
         </span>
+        <a class="about right" href="https://github.com/ccjustcc">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>更多(mygithub)
+        </a>
     </footer>
     <div class="fade">
         <div class="top">
@@ -55,10 +61,6 @@
 </body>
 <script src="js/profill.js"></script>
 <script>
-
-
-
-
 window.onload=function(){
     var IE = isIE();
     var hastransform = cssProperty('transform');

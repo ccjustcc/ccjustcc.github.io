@@ -105,6 +105,14 @@ body {
   bottom: 0;
   padding-bottom: 20px;
   cursor: pointer; }
+  .about.right {
+    right: 20px;
+    color: #fff;
+    text-decoration: none; }
+  .about.right:hover {
+    color: red; }
+    .about.right:hover .dot {
+      background: red; }
   .about .dot {
     width: 10px;
     height: 10px;
