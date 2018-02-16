@@ -39,6 +39,10 @@ body{
     background-image: url(../img/shop.JPG);
     background-size:cover;
   }
+  &:nth-child(4){
+    background-image: url(../img/vuemusic.JPG);
+    background-size:cover;
+  }
   &:last-child{
    margin-right:0;
   }
